@@ -19,10 +19,21 @@ test {
     useJUnitPlatform()
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(18)
+    }
+}
+
 tasks.withType(JavaExec).configureEach {
+    jvmArgs += "--enable-preview"
+}
+
+tasks.withType(Test).configureEach {
     jvmArgs += "--enable-preview"
 }
 
 tasks.withType(JavaCompile).configureEach {
     options.compilerArgs += "--enable-preview"
 }
+
