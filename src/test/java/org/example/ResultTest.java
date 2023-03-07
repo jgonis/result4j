@@ -7,7 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class ResultTest {
 
     @Test
-    public void testAdd() {
-        assertEquals(42, Integer.sum(19,23));
+    public void testIsOk() {
+        Result<Integer, Exception> ok = new Result.Ok<>(1);
+        Result<Integer, Exception> error = new Result.Err<>(new Exception());
+        assertTrue(ok.isOk());
+        assertFalse(error.isOk());
     }
 }
