@@ -1,4 +1,4 @@
-package org.example;
+package com.secretlyop;
 
 public sealed interface Result<T, E> {
     record Err<E, T>(E errorValue) implements Result<T, E>{}

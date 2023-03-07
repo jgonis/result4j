@@ -1,4 +1,4 @@
-package org.example;
+package com.secretlyop;
 
 public sealed interface Option<T> {
     record None<T>() implements Option<T>{}

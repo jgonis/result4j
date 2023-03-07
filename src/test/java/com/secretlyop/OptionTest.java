@@ -1,4 +1,4 @@
-package org.example;
+package com.secretlyop;
 
 import org.junit.jupiter.api.Test;
 
